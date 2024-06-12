@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Promeo</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+        <div class="navbar" id="myNavbar">
+            <a href="/" class="active">Accueil</a>
+            <a href="/connexion">Connexion</a>
+              <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+    <main>
+      <div class="container">
+            {% if error %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endif %}
+            <div class="login-container">
+                <form class="login-form" method="POST" action="/connexion">
+                  <h2>Connexion</h2>
+                  <div class="input-group">
+                    <label for="Mail">Adresse mail</label>
+                    <input type="email" id="Mail" name="Mail" required>
+                  </div>
+                  <div class="input-group">
+                    <label for="MDP">Mot de passe</label>
+                    <input type="password" id="MDP" name="MDP" required>
+                  </div>
+                  <button type="submit">Se connecter</button>
+                </form>
+                <div class="create-account">
+                  <p>Vous n'avez pas de compte ? <a href="/inscription">Créer un compte</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </main>
+</body>
+</html>

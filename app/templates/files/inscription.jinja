@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Promeo</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar" id="myNavbar">
+            <a href="index" class="active">Accueil</a>
+            <a href="/prdv">Prise de RDV</a>
+            <a href="/rdv">Tableau</a>
+            <a href="/connexion">Connexion</a>
+            <a href="#" class="icon">
+              <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <div class="container">
+            <h2>Formulaire d'inscription</h2>
+            <form method="POST" action="/inscription">
+                <div class="form-group">
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom" required>
+                    <br>
+                    <label for="prenom">Prénom :</label>
+                    <input type="text" id="prenom" name="prenom" required>
+                    <br>
+                    <label for="date_naissance">Date de Naissance :</label>
+                    <input type="date" id="date_naissance" name="date_naissance" required>
+                    <br>
+                    <label for="Mail">Adresse mail :</label>
+                    <input type="email" id="Mail" name="Mail" required>
+                    <br>
+                    <label for="MDP">Mot de passe :</label>
+                    <input type="password" id="MDP" name="MDP" required>
+                    <br>
+                    <label for="etudiant_promeo">Étudiant Promeo :</label>
+                    <select id="etudiant_promeo" name="etudiant_promeo" required>
+                        <option value="oui">Oui</option>
+                        <option value="non">Non</option>
+                    </select>
+                    <br>
+                    <button type="submit">Soumettre</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
